@@ -1,0 +1,196 @@
+<!DOCTYPE html>s
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="keywords"
+          content="Riddler CSI Computer Society of India VIT Vellore Institue of Technology CSI-VITU CSIVITU quiz gravitas">
+
+    <meta name="description"
+          content="A 3-day National online end-to-end cryptography quiz game, with a profound legacy.
+                This year, choose to be a traveller and be decisive to unlock your next destination.
+                30 brain-wrecking questions, 36 hours on hand.">
+    <meta name="distribution" content="web">
+    <meta name="distribution" content="global">
+    <meta name="copyright" content="Copyright 2017">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Riddler</title>
+
+    <link rel="icon" type="image/png" href="https://www.dropbox.com/s/fgiz25zb69bi0o3/r_logo_lt.png?dl=1" />
+
+    <script>
+	    (function(){
+		    function id(v){
+		    	return document.getElementById(v);
+		    }
+
+		    function loadbar() {
+			    var ovrl = id("overlay"),
+				    prog = id("progress"),
+				    stat = id("progstat"),
+				    img = document.images,
+				    c = 0;
+			    var bg_svg = id("Layer_1");
+			    tot = img.length;
+
+			    function imgLoaded(){
+					c += 1;
+                    var perc = ((100/tot*c) << 0) +"%";
+					prog.style.width = perc;
+					stat.innerHTML = "Loading "+ perc;
+					bg_svg.style.opacity = "0.15";
+					if(c===(tot)) return doneLoading();
+			    }
+			    function doneLoading(){
+                    document.querySelector("body").classList.remove("preload");
+				    setTimeout(function(){
+					    ovrl.style.transform = "translateX(100vw)";
+				    }, 200);
+				    setTimeout(function(){
+					    ovrl.style.opacity = 0;
+					    ovrl.style.display = "none";
+					    document.querySelector(".main-content").classList.add("translateX");
+				    }, 1500);
+			    }
+			    for(var i=0; i<tot; i++) {
+				    var tImg     = new Image();
+				    tImg.onload  = imgLoaded;
+				    tImg.onerror = imgLoaded;
+				    tImg.src     = img[i].src;
+			    }
+		    }
+		    document.addEventListener('DOMContentLoaded', loadbar, false);
+	    }());
+    </script>
+</head>
+<body class="preload">
+    <div id="overlay">
+        <div id="progstat">0%</div>
+        <div id="progress"></div>
+    </div>
+
+    <div id="background">
+        <svg id="Layer_1" x="0px" y="0px" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080; opacity: 0" xml:space="preserve">
+            <style type="text/css">
+                .st0{fill:none;stroke:#7CFFC8;stroke-miterlimit:1;}
+            </style>
+            <line id="XMLID_20_" class="st0" x1="0" y1="1080.5" x2="1963" y2="1080.5"/>
+            <line id="XMLID_21_" class="st0" x1="0" y1="1030.5" x2="1963" y2="1030.5"/>
+            <line id="XMLID_22_" class="st0" x1="0" y1="981.5" x2="1963" y2="981.5"/>
+            <line id="XMLID_23_" class="st0" x1="0" y1="932.5" x2="1963" y2="932.5"/>
+            <line id="XMLID_24_" class="st0" x1="0" y1="883.5" x2="1963" y2="883.5"/>
+            <line id="XMLID_25_" class="st0" x1="0" y1="834.5" x2="1963" y2="834.5"/>
+            <line id="XMLID_26_" class="st0" x1="0" y1="785.5" x2="1963" y2="785.5"/>
+            <line id="XMLID_27_" class="st0" x1="0" y1="736.5" x2="1963" y2="736.5"/>
+            <line id="XMLID_28_" class="st0" x1="0" y1="687.5" x2="1963" y2="687.5"/>
+            <line id="XMLID_29_" class="st0" x1="0" y1="638.5" x2="1963" y2="638.5"/>
+            <line id="XMLID_30_" class="st0" x1="0" y1="589.5" x2="1963" y2="589.5"/>
+            <line id="XMLID_31_" class="st0" x1="0" y1="540.5" x2="1963" y2="540.5"/>
+            <line id="XMLID_32_" class="st0" x1="0" y1="491.5" x2="1963" y2="491.5"/>
+            <line id="XMLID_33_" class="st0" x1="0" y1="442.5" x2="1963" y2="442.5"/>
+            <line id="XMLID_34_" class="st0" x1="0" y1="393.5" x2="1963" y2="393.5"/>
+            <line id="XMLID_35_" class="st0" x1="0" y1="343.5" x2="1963" y2="343.5"/>
+            <line id="XMLID_36_" class="st0" x1="0" y1="294.5" x2="1963" y2="294.5"/>
+            <line id="XMLID_37_" class="st0" x1="0" y1="245.5" x2="1963" y2="245.5"/>
+            <line id="XMLID_38_" class="st0" x1="0" y1="196.5" x2="1963" y2="196.5"/>
+            <line id="XMLID_39_" class="st0" x1="0" y1="147.5" x2="1963" y2="147.5"/>
+            <line id="XMLID_40_" class="st0" x1="0" y1="98.5" x2="1963" y2="98.5"/>
+            <line id="XMLID_41_" class="st0" x1="0" y1="49.5" x2="1963" y2="49.5"/>
+            <line id="XMLID_42_" class="st0" x1="1910.5" y1="0" x2="1910.5" y2="1079"/>
+            <line id="XMLID_43_" class="st0" x1="1856.5" y1="0" x2="1856.5" y2="1079"/>
+            <line id="XMLID_44_" class="st0" x1="1803.5" y1="0" x2="1803.5" y2="1079"/>
+            <line id="XMLID_45_" class="st0" x1="1750.5" y1="0" x2="1750.5" y2="1079"/>
+            <line id="XMLID_46_" class="st0" x1="1697.5" y1="0" x2="1697.5" y2="1079"/>
+            <line id="XMLID_47_" class="st0" x1="1644.5" y1="0" x2="1644.5" y2="1079"/>
+            <line id="XMLID_48_" class="st0" x1="1591.5" y1="0" x2="1591.5" y2="1079"/>
+            <line id="XMLID_49_" class="st0" x1="1537.5" y1="0" x2="1537.5" y2="1079"/>
+            <line id="XMLID_50_" class="st0" x1="1484.5" y1="0" x2="1484.5" y2="1079"/>
+            <line id="XMLID_51_" class="st0" x1="1432.5" y1="0" x2="1432.5" y2="1079"/>
+            <line id="XMLID_52_" class="st0" x1="1379.5" y1="0" x2="1379.5" y2="1079"/>
+            <line id="XMLID_53_" class="st0" x1="1326.5" y1="0" x2="1326.5" y2="1079"/>
+            <line id="XMLID_54_" class="st0" x1="1273.5" y1="0" x2="1273.5" y2="1079"/>
+            <line id="XMLID_55_" class="st0" x1="1220.5" y1="0" x2="1220.5" y2="1079"/>
+            <line id="XMLID_56_" class="st0" x1="1166.5" y1="0" x2="1166.5" y2="1079"/>
+            <line id="XMLID_57_" class="st0" x1="1113.5" y1="0" x2="1113.5" y2="1079"/>
+            <line id="XMLID_58_" class="st0" x1="1060.5" y1="0" x2="1060.5" y2="1079"/>
+            <line id="XMLID_59_" class="st0" x1="1007.5" y1="0" x2="1007.5" y2="1079"/>
+            <line id="XMLID_60_" class="st0" x1="955.5" y1="0" x2="955.5" y2="1079"/>
+            <line id="XMLID_61_" class="st0" x1="902.5" y1="0" x2="902.5" y2="1079"/>
+            <line id="XMLID_62_" class="st0" x1="848.5" y1="0" x2="848.5" y2="1079"/>
+            <line id="XMLID_63_" class="st0" x1="795.5" y1="0" x2="795.5" y2="1079"/>
+            <line id="XMLID_64_" class="st0" x1="742.5" y1="0" x2="742.5" y2="1079"/>
+            <line id="XMLID_65_" class="st0" x1="689.5" y1="0" x2="689.5" y2="1079"/>
+            <line id="XMLID_66_" class="st0" x1="636.5" y1="0" x2="636.5" y2="1079"/>
+            <line id="XMLID_67_" class="st0" x1="583.5" y1="0" x2="583.5" y2="1079"/>
+            <line id="XMLID_68_" class="st0" x1="530.5" y1="0" x2="530.5" y2="1079"/>
+            <line id="XMLID_69_" class="st0" x1="477.5" y1="0" x2="477.5" y2="1079"/>
+            <line id="XMLID_70_" class="st0" x1="424.5" y1="0" x2="424.5" y2="1079"/>
+            <line id="XMLID_71_" class="st0" x1="371.5" y1="0" x2="371.5" y2="1079"/>
+            <line id="XMLID_72_" class="st0" x1="318.5" y1="0" x2="318.5" y2="1079"/>
+            <line id="XMLID_73_" class="st0" x1="265.5" y1="0" x2="265.5" y2="1079"/>
+            <line id="XMLID_74_" class="st0" x1="212.5" y1="0" x2="212.5" y2="1079"/>
+            <line id="XMLID_75_" class="st0" x1="158.5" y1="0" x2="158.5" y2="1079"/>
+            <line id="XMLID_76_" class="st0" x1="105.5" y1="0" x2="105.5" y2="1079"/>
+            <line id="XMLID_77_" class="st0" x1="52.5" y1="0" x2="52.5" y2="1079"/>
+        </svg>
+        <canvas id="canvas-element" width="1920" height="1080"></canvas>
+    </div>
+    <div id="content-wrapper">
+        <div class="header">
+            <img class="csi-logo" src="https://www.dropbox.com/s/fci4nb5hbsmvzi6/csi_logo.png?dl=1" alt="Computer Society of India">
+            <img class="riddler-logo" src="https://www.dropbox.com/s/fgiz25zb69bi0o3/r_logo_lt.png?dl=1" alt="Riddler">
+        </div>
+
+        <div class="social-icons">
+            <a href="https://twitter.com/csivitu" target="_blank" class="social-icon twitter">
+                <svg id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
+                <g>
+                <g id="post-twitter">
+                    <path d="M459,0H51C22.95,0,0,22.95,0,51v408c0,28.05,22.95,51,51,51h408c28.05,0,51-22.95,51-51V51C510,22.95,487.05,0,459,0z     M400.35,186.15c-2.55,117.3-76.5,198.9-188.7,204C165.75,392.7,132.6,377.4,102,359.55c33.15,5.101,76.5-7.649,99.45-28.05    c-33.15-2.55-53.55-20.4-63.75-48.45c10.2,2.55,20.4,0,28.05,0c-30.6-10.2-51-28.05-53.55-68.85c7.65,5.1,17.85,7.65,28.05,7.65    c-22.95-12.75-38.25-61.2-20.4-91.8c33.15,35.7,73.95,66.3,140.25,71.4c-17.85-71.4,79.051-109.65,117.301-61.2    c17.85-2.55,30.6-10.2,43.35-15.3c-5.1,17.85-15.3,28.05-28.05,38.25c12.75-2.55,25.5-5.1,35.7-10.2    C425.85,165.75,413.1,175.95,400.35,186.15z" fill="#8EEDE8"/>
+                </g>
+                </g>
+            </svg>
+            </a>
+            <a href="" target="_blank" class="social-icon facebook">
+                <svg id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 60.734 60.733" style="enable-background:new 0 0 60.734 60.733;" xml:space="preserve">
+                <g>
+                    <path d="M57.378,0.001H3.352C1.502,0.001,0,1.5,0,3.353v54.026c0,1.853,1.502,3.354,3.352,3.354h29.086V37.214h-7.914v-9.167h7.914   v-6.76c0-7.843,4.789-12.116,11.787-12.116c3.355,0,6.232,0.251,7.071,0.36v8.198l-4.854,0.002c-3.805,0-4.539,1.809-4.539,4.462   v5.851h9.078l-1.187,9.166h-7.892v23.52h15.475c1.852,0,3.355-1.503,3.355-3.351V3.351C60.731,1.5,59.23,0.001,57.378,0.001z" fill="#8EEDE8"/>
+                </g>
+            </svg>
+            </a>
+        </div>
+
+        <div class="organizer">
+            Organized by
+            <a href="https://csivit.com/" target="_blank" class="social-icon csi-link">
+                <span class="color-green">CSI - VITU</span>
+            </a>
+        </div>
+
+        <div class="main-content">
+            <h4>
+                <span class="color-green title">RIDDLER</span>
+                A 3-day <em>National</em> online end-to-end cryptography quiz game, with a profound legacy.
+                This year, choose to be a traveller and be decisive to unlock your next destination. <br>
+                30 brain-wrecking questions, 36 hours on hand.
+            </h4>
+            <div class="form-wrapper">
+            <p>Pre-register to reserve your spot.</p>
+            <form method="POST" id="registration-form">
+                <input type="email" name="mail" placeholder="e-mail">
+                <input type="submit" class="submit" name="submit" id="apparatus" value="Pre-register"/>
+            </form>
+            </div>
+            <div class="post-result">We have saved you a spot!</div>
+        </div>
+
+        <div class="details">
+            <ul>
+                <li id="day-display">We are starting soon.</li>
+                <li><em>Game starts on </em> &nbsp; <span class="color-green"> 24th March, 2017.</span> </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

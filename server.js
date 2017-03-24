@@ -53,6 +53,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post("/form", function (req, res) {
 	var mail = Object.keys(req.body)[0];
+
+	if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail) == false){
+		return res.status(500).send("Invalid email");
+	}
 	// console.log(mail);
 	var newUser = new User({
 		mail: mail.toString(),
@@ -67,7 +71,7 @@ app.post("/form", function (req, res) {
 	});
 });
 
-app.listen(port, '0.0.0.0', function onStart(err) {
+app.listen(port, 'localhost', function onStart(err) {
 	if (err) {
 		console.log(err);
 	}
